@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "meson setup",
+            "type": "shell",
+            "command": "meson setup build",
+            "group": "build"
+        },
+        {
+            "label": "ninja build",
+            "type": "shell",
+            "command": "ninja -C build",
+            "dependsOn": "meson setup",
+            "group": "build"
+        }
+    ]
+}

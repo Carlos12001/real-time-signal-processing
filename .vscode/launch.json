@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/dsp1",
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Disable pretty-printing for gdb",
+                    "text": "-disable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "ninja build", 
+            "miDebuggerPath": "/usr/bin/gdb",
+            "linux": {
+                "MIMode": "gdb"
+            }
+        }
+    ]
+}
